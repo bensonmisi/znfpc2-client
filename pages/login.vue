@@ -9,11 +9,10 @@
                    <v-card-text>
                        <v-form v-model="valid" ref="form" lazy-validation>
                       <v-text-field
-                            label="Email"
-                            type="email"
+                            label="Username"
                             outlined
-                            v-model="form.email"
-                            :rules="emailRule"
+                            v-model="form.username"
+                            :rules="usernameRule"
                         />
                          <v-text-field
                             v-model="form.password"
@@ -57,9 +56,7 @@ export default {
           required: value => !!value || 'Required.',
           min: v => v.length >= 8 || 'Min 8 characters'
         },
-         emailRule:[ v => !!v || 'E-mail is required',
-                    v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
-                  ],
+         usernameRule:[ v => !!v || 'E-mail is required'],
         valid:false,
         loading:false,
         color:"",

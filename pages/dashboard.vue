@@ -15,7 +15,6 @@
                 <v-card-title>
                   My Inquires
                     <v-spacer/>
-                    <InquiryFilter/>
                     <InquiryAdd/>
                 </v-card-title>
                 <v-card-text>
